@@ -541,7 +541,7 @@ async function acquireQpdfWindows(noqpdf) {
   if (noqpdf) {
     pkgs = pkgs.concat(["qpdf"]);
   }
-  var args = ["install"].concat(pkgs).concat(["-y --no-progress"]);
+  var args = ["install"].concat(pkgs).concat(["-y"]).concat(["--no-progress"]);
   try {
     await exec.exec("choco", args);
   } catch (error) {
