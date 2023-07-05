@@ -562,7 +562,7 @@ function acquireQpdfWindows(noqpdf) {
         if (noqpdf) {
             pkgs = pkgs.concat(["qpdf"]);
         }
-        var args = ["install"].concat(pkgs).concat(["--no-progress"]);
+        var args = ["install"].concat(pkgs).concat(["-y"]).concat(["--no-progress"]);
         try {
             yield exec.exec("choco", args);
         }
