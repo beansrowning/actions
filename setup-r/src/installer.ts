@@ -542,13 +542,13 @@ async function acquireQpdfWindows(noqpdf) {
     pkgs = pkgs.concat(["qpdf"]);
   }
   var args = ["install"].concat(pkgs).concat(["-y"]).concat(["--no-progress"]);
-  try {
-    await exec.exec("choco", args);
-  } catch (error) {
-    core.debug(`${error}`);
+  // try {
+  //   await exec.exec("choco", args);
+  // } catch (error) {
+  //   core.debug(`${error}`);
 
-    throw `Failed to install qpdf: ${error}`;
-  }
+  //   throw `Failed to install qpdf: ${error}`;
+  // }
 }
 
 async function setupRLibrary() {
