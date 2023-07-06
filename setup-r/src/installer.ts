@@ -543,7 +543,7 @@ async function acquireQpdfWindows(noqpdf) {
   }
   var args = ["install"].concat(pkgs).concat(["-y"]).concat(["--no-progress"]);
   try {
-    await exec.exec("choco", args);
+    // await exec.exec("choco", args);
   } catch (error) {
     core.debug(`${error}`);
 
